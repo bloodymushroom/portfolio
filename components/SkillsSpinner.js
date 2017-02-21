@@ -5,7 +5,8 @@ export default class SkillsSpinner extends Component {
     super(props);
   }
 
-  transformDivs(n) {
+  transformDivs(n, str) {
+    this.props.setActiveChart(str); 
     var deg = document.documentElement.style.setProperty('--rotation', `${n + 'deg'}`);
     
     var cat1 = document.querySelector('.cat-1 *');
@@ -20,30 +21,26 @@ export default class SkillsSpinner extends Component {
 
   }
 
-  ComponentWillMount() {
-    
-  }
-
   render () {
     return (
       <div>
         <div className='transformer'>
-          <div onClick={() => this.transformDivs(0)} className='cat cat-1'>
+          <div onClick={() => this.transformDivs(0, 'Languages')} className='cat cat-1'>
             <div>
             Languages
             </div>
           </div>
-          <div onClick={() => this.transformDivs(-90)} className='cat cat-2'>
+          <div onClick={() => this.transformDivs(-90, 'Frameworks')} className='cat cat-2'>
             <div>
             Frameworks
             </div>
           </div> 
-          <div onClick={() => this.transformDivs(180)} className='cat cat-3'>
+          <div onClick={() => this.transformDivs(180, 'BackEnd')} className='cat cat-3'>
             <div>
             Back End
             </div>
           </div>
-          <div onClick={() => this.transformDivs(90)} className='cat cat-4'>
+          <div onClick={() => this.transformDivs(90, 'Other')} className='cat cat-4'>
             <div>
             Other
             </div>
