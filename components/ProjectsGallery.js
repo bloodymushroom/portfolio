@@ -30,22 +30,22 @@ export default class ProjectsGallery extends Component {
     return (
       <div className='panels'>
         <div className='panel panel-1'>
-          <p>MVP</p>
+          <p>Angular - Express - Mongo</p>
           <p>Tinder Clone</p>
-          <p>Digital Class Pet</p>
+          <p>My take on Tinder</p>
         </div>
         <div className='panel panel-2'>
-          <p>Greenfield</p>
+          <p>React - Express - MySQL</p>
           <p>HR Gotchi</p>
           <p>Digital Class Pet</p>
         </div>
         <div className='panel panel-3'>
-          <p>Legacy</p>
+          <p>React - Express - MongoDB</p>
           <p>Colorz.io</p>
           <p>Color Palette</p>
         </div>
         <div className='panel panel-4'>    
-          <p>Thesis</p>
+          <p>React - Express - MySQL</p>
           <p>Callback</p>
           <p>Personal Recruiter</p>
         </div>
