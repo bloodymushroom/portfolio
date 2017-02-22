@@ -5,7 +5,6 @@ export default class Tooltip extends Component {
     super(props);
   }
 
-
   render() {
     return (
       <div style={this.props.style || {}} className='tooltip'>

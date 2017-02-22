@@ -95,7 +95,7 @@ var content = {
             }
           }>
             <span style={{textAlign: 'right'}}>Emmeline Lan</span>
-            <span style={{textAlign: 'right'}}>Emmeline.Lan@gmail.com</span>
+            <a style={{textAlign: 'right'}} href='https://mail.google.com/mail/?view=cm&fs=1&to=emmeline.lan@gmail.com'>Emmeline.Lan@gmail.com</a>
             <span style={{textAlign: 'right'}}>(510) 468-6002</span>
           </div>
         </div>
