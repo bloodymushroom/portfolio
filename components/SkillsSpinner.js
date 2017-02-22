@@ -1,8 +1,23 @@
 import React, {Component} from 'react'
 
+//components
+import Tooltip from './Tooltip'
+
 export default class SkillsSpinner extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      shouldTip: true
+    }
+
+    this.removeTip = this.removeTip.bind(this);
+  }
+
+  removeTip() {
+    this.setState({
+      shouldTip: false
+    })
   }
 
   transformDivs(n, str) {
@@ -23,7 +38,8 @@ export default class SkillsSpinner extends Component {
 
   render () {
     return (
-      <div>
+      <div style={{position: 'relative'}} onClick={this.removeTip}>
+        {this.state.shouldTip && <Tooltip content="Click a category!"/>}
         <div className='transformer'>
           <div onClick={() => this.transformDivs(0, 'Languages')} className='cat cat-1'>
             <div>

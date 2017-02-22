@@ -8,6 +8,7 @@ import SkillsSpinner from './SkillsSpinner';
 import SkillCharts from './SkillCharts';
 import HeaderPanel from './HeaderPanel';
 import LandingComponent from './LandingComponent';
+import Tooltip from './Tooltip'
 
 var content = {
   skills: {
@@ -29,6 +30,8 @@ var content = {
     clickHandler: () => console.log('About')
   }
 }
+
+
 
 @observer class App extends Component {
   constructor(props) {

@@ -1,8 +1,23 @@
 import React, {Component} from 'react'
 
+//components 
+import Tooltip from './Tooltip'
+
 export default class ProjectsGallery extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      shouldTip: true
+    }
+
+    this.removeTip = this.removeTip.bind(this);
+  }
+
+  removeTip() {
+    this.setState({
+      shouldTip: false
+    })
   }
 
   componentDidMount() {
@@ -28,7 +43,8 @@ export default class ProjectsGallery extends Component {
 
   render() {
     return (
-      <div className='panels'>
+      <div onClick={this.removeTip} className='panels'>
+        {this.state.shouldTip && <Tooltip style={{opacity: 1, top:'35%', right:'25%'}} content='Select a panel!' />}
         <div className='panel panel-1'>
           <p>Angular - Express - Mongo</p>
           <p>Tinder Clone</p>

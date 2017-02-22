@@ -20,7 +20,6 @@ import Store from './Store.js';
       this.languagesChart();
     } else if (this.props.activeChart === 'Frameworks' ) {
       this.frameworksChart();
-      console.log('other chart')
     } else if (this.props.activeChart === 'BackEnd') {
       this.backEndChart();
     } else {
