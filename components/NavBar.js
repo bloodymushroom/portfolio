@@ -27,9 +27,9 @@ export default class NavBar extends Component {
           </div>
           <div className='nav-row bottom'>
             Connect with me:
-            <a>LinkedIn</a>
-            <a>Angelist</a>
-            <a>Github</a>
+            <a href='https://www.linkedin.com/in/emmeline-lan'>LinkedIn</a>
+            <a href='https://angel.co/emmeline-lan'>Angelist</a>
+            <a href='https://github.com/bloodymushroom'>Github</a>
           </div>
         </div>
       </div>

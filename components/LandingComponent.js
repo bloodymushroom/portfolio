@@ -7,7 +7,7 @@ export default class LandingComponent extends Component {
 
   pageTitle() {
     return (
-      <div className='pageTitle'>
+      <div className='page-title'>
         <span>Welcome to</span>
         <br />
         <span>my portfolio!</span>
@@ -17,18 +17,40 @@ export default class LandingComponent extends Component {
 
   jobTitle() {
     return (
-      <div className='jobTitle'>
-        <span>Full stack</span>
-        <br />
-        <span>developer</span>
+      <div className='job-title'>
+        <span>Full stack<br/>developer</span>
       </div>
     )
   }
+
+  circleImage() {
+    return (
+      <img className='circle-image' src='http://i.imgur.com/jBExftp.png'></img>
+    )
+  }
+
+  imageBar() {
+    return (
+      <div className='image-bar'>
+        Made with
+        <div>
+          <img id='css3' src='http://i.imgur.com/Ti4jtiW.png'></img>
+          <img id='html5' src='http://i.imgur.com/iooM79o.png'></img>
+          <img id='react' src='http://i.imgur.com/vadN1e6.png'></img>
+        </div>
+      </div>
+    )
+  }
+
+
   render() {
     return(
       <div className='landing-container'>
+        <div className='landing-bar'></div>
         {this.pageTitle()}
         {this.jobTitle()}
+        {this.circleImage()}
+        {this.imageBar()}
       </div>
     )
   }
