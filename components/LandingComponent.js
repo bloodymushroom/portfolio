@@ -8,9 +8,8 @@ export default class LandingComponent extends Component {
   pageTitle() {
     return (
       <div className='page-title'>
-        <span>Welcome to</span>
-        <br />
-        <span>my portfolio!</span>
+        <span>Welcome to<br />
+        my portfolio!</span>
       </div> 
     )
   }
