@@ -18,14 +18,16 @@ export default class LandingComponent extends Component {
   jobTitle() {
     return (
       <div className='job-title'>
-        <span>Full stack<br/>developer</span>
+        <div>Full stack<br/>developer</div>
       </div>
     )
   }
 
   circleImage() {
     return (
-      <img className='circle-image' src='http://i.imgur.com/jBExftp.png'></img>
+      <div className='circle-container'>
+        <img className='circle-image' src='http://i.imgur.com/jBExftp.png'></img>
+      </div>
     )
   }
 
