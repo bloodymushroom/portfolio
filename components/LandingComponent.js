@@ -8,8 +8,7 @@ export default class LandingComponent extends Component {
   pageTitle() {
     return (
       <div className='page-title'>
-        <span>Welcome to<br />
-        my portfolio!</span>
+        <span>Welcome to my portfolio!</span>
       </div> 
     )
   }
@@ -17,7 +16,9 @@ export default class LandingComponent extends Component {
   jobTitle() {
     return (
       <div className='job-title'>
-        <div>Full stack<br/>developer</div>
+        <span>Front End Design</span>
+        <span style={{marginLeft: '60px'}}>Full Stack Apps</span>
+        <span>UI/UX Design</span>
       </div>
     )
   }
