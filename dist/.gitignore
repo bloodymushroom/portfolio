@@ -1,0 +1,5 @@
+# ignore node modules
+dist/
+node_modules/
+
+*.log
