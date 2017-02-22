@@ -83,7 +83,19 @@ var content = {
           buttonName={content.about.buttonName}
           clickHandler={content.about.clickHandler}
         />
-        <div className='filler'></div>
+        <div className='filler'>
+          <div style={{margin: '20px 0 20px 0', flex: 1, borderRight: '3px solid white'}}></div>
+          <div style={
+            {
+              display: 'flex', flex: 1, flexDirection: 'column', 
+              justifyContent: 'flex-end', fontSize: '2em', padding: '20px'
+            }
+          }>
+            <span style={{textAlign: 'right'}}>Emmeline Lan</span>
+            <span style={{textAlign: 'right'}}>Emmeline.Lan@gmail.com</span>
+            <span style={{textAlign: 'right'}}>(510) 468-6002</span>
+          </div>
+        </div>
       </div>
     )
   }
