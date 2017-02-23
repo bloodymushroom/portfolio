@@ -43,7 +43,7 @@ export default class HeaderPanel extends Component {
         </div>
         <div className='header-link'>
           <button onClick={this.clickInProgress} className='spec-button'>
-          {this.state.showPopup && <Tooltip style={{top: '0px', right: '-50px'}} content='Pending, please check back later' />}
+          {this.state.showPopup && <Tooltip style={{top: '-80%', left: '60%'}} content='Pending, please check back later' />}
           {this.props.buttonName}
           </button>
         </div>

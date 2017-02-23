@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import $ from 'jquery'
 
+//commponents
+import CardImageGallery from './CardImageGallery'
+
 export default class OtherExperience extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +20,8 @@ export default class OtherExperience extends Component {
         </div>
         <div className='other-image hidden'>
           <span className='other-text'>
-          {cat}
+            {cat.split(',')[0]}
+            <span style={{fontStyle: 'italic'}}>{cat.split(',')[1]}</span>
           </span>
         </div>
       </div>
@@ -46,16 +50,15 @@ export default class OtherExperience extends Component {
     return (
       <div className='other-container'>
         <div style={{width:'30%', borderRight: '3px solid #ECEFF1'}} className='other-cat'>
-          <div className='other-header'>Industries</div>
-          {this.imageSlider('http://i.imgur.com/iFgIDevm.png', 'Pharmaceuticals and Data Analysis')}
-          {this.imageSlider('http://i.imgur.com/tAhhLXPm.jpg', 'Semiconductor Processing')}
-          {this.imageSlider('http://i.imgur.com/5teFoqH.png', 'Healthcare Management')}
-          {this.imageSlider('http://i.imgur.com/3agxoSXm.png', 'Materials Engineering')}
+          <div className='other-header'>Work Experience</div>
+          {this.imageSlider('http://i.imgur.com/iFgIDevm.png', 'Case Manager,Pharmaceutical Data Analysis')}
+          {this.imageSlider('http://i.imgur.com/tAhhLXPm.jpg', 'Developer,Semiconductor Processing')}
+          {this.imageSlider('http://i.imgur.com/5teFoqH.png', 'Clinical Assistant,Healthcare Management')}
+          {this.imageSlider('http://i.imgur.com/3agxoSXm.png', 'Bachelor of Science,Materials Engineering')}
         </div>
-        <div style={{width: '70%'}} className='other-cat'>
+        <div style={{width: '68%', marginLeft: '2%'}} className='other-cat'>
           <div className='other-header'>Art and Design</div>
-          <div>
-          </div>
+          <CardImageGallery />
         </div>
       </div>
     )

@@ -12,6 +12,11 @@ import Store from './Store.js';
     this.languagesChart = this.languagesChart.bind(this);
     this.frameworksChart = this.frameworksChart.bind(this);
     this.renderChart = this.renderChart.bind(this);
+
+    this.state = {
+        labelSize: 18,
+        titleSize: 20
+    }
   }
 
   renderChart() {
@@ -58,12 +63,21 @@ import Store from './Store.js';
         options: {
             title: {
                 display: true,
-                text: 'Languages'
+                text: 'Languages - Programming & Non-programming',
+                fontSize: this.state.titleSize
             },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                        min: 0,
+                        max: 5,
+                        stepSize: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: this.state.labelSize
                     }
                 }]
             }
@@ -100,10 +114,23 @@ import Store from './Store.js';
             }]
         },
         options: {
+            title: {
+                display: true,
+                text: 'Front End Frameworks',
+                fontSize: this.state.titleSize
+            },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                        min: 0,
+                        max: 5,
+                        stepSize: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: this.state.labelSize
                     }
                 }]
             }
@@ -140,10 +167,23 @@ import Store from './Store.js';
             }]
         },
         options: {
+            title: {
+                display: true,
+                text: 'Other Skills',
+                fontSize: this.state.titleSize
+            },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                        min: 0,
+                        max: 5,
+                        stepSize: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: this.state.labelSize
                     }
                 }]
             }
@@ -180,10 +220,23 @@ import Store from './Store.js';
             }]
         },
         options: {
+            title: {
+                display: true,
+                text: 'Back End - Server and Database',
+                fontSize: this.state.titleSize
+            },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                        min: 0,
+                        max: 5,
+                        stepSize: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: this.state.labelSize
                     }
                 }]
             }
@@ -202,7 +255,7 @@ import Store from './Store.js';
   render() {
     return (
       <div style={{marginLeft: '50px', flex: 1}}>
-        <h2>{this.props.activeChart}</h2>
+        <br />
         {this.props.activeChart === 'Languages' && <canvas className='chart' id='languages' ></canvas>}
         {this.props.activeChart === 'Frameworks' && <canvas className='chart' id='frameworks' ></canvas>}
         {this.props.activeChart === 'BackEnd' && <canvas className='chart' id='backend' ></canvas>}

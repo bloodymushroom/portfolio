@@ -27,7 +27,7 @@ var content = {
   },
   about: {
     mainHeader: 'About Me',
-    headerDetail: 'In addition to programming, I also have professional experience in the semiconductor, healthcare, and art industries.',
+    headerDetail: 'I have professional experience in the semiconductor, healthcare, and art industries and care deeply about engineering solutions that improve the lives of others. I also love painting and design!',
     buttonName: 'See Other Projects',
     clickHandler: () => console.log('About')
   }

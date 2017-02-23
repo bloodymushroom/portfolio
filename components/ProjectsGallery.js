@@ -44,7 +44,7 @@ export default class ProjectsGallery extends Component {
   render() {
     return (
       <div onClick={this.removeTip} className='panels'>
-        {this.state.shouldTip && <Tooltip style={{opacity: 1, top:'30%', right:'25%'}} content='Select a panel!' />}
+        {false && <Tooltip style={{opacity: 1, top:'30%', right:'25%'}} content='Select a panel!' />}
         <div className='panel panel-1'>
           <p>Angular - Express - Mongo</p>
           <p className='clickable-text'>Tinder Clone</p>
