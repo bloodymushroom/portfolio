@@ -21,7 +21,7 @@ var content = {
   },
   projects: {
     mainHeader: 'Projects',
-    headerDetail: 'Here are some of my projects! The apps were created with React with MobX state management or Angular Frameworks, hosted on Express server with a MySQL or MongoDB back end. Platforms include web, mobile, and Chrome extension.',
+    headerDetail: 'Here are some of my projects. Framworks include React with MobX and Angular. Platforms include web, mobile, and Chrome extension.',
     buttonName: 'See Project Details',
     clickHandler: () => console.log('Projects')
   },

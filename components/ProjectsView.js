@@ -6,6 +6,7 @@ export default class ProjectsView extends Component {
   }
 
   render() {
-    
+    <div className='project-container'>
+    </div>
   }
 }

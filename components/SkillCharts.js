@@ -56,6 +56,10 @@ import Store from './Store.js';
             }]
         },
         options: {
+            title: {
+                display: true,
+                text: 'Languages'
+            },
             scales: {
                 yAxes: [{
                     ticks: {

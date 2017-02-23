@@ -1,8 +1,33 @@
 import React, {Component} from 'react';
+import Tooltip from './Tooltip'
+
 
 export default class HeaderPanel extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      showPopup: false
+    }
+
+    this.clickInProgress = this.clickInProgress.bind(this);
+  }
+
+  clickInProgress() {
+    var context = this;
+
+    if (!this.state.showPopup) {
+      this.setState({
+        showPopup: true
+      })
+
+      setTimeout( () => {
+
+        this.setState({
+          showPopup: false
+        })
+      }, 1500)
+    }
   }
 
   render() {
@@ -17,7 +42,10 @@ export default class HeaderPanel extends Component {
           </div>
         </div>
         <div className='header-link'>
-          <button onClick={this.props.clickHandler} className='spec-button'>{this.props.buttonName}</button>
+          <button onClick={this.clickInProgress} className='spec-button'>
+          {this.state.showPopup && <Tooltip style={{top: '0px', right: '-50px'}} content='Pending, please check back later' />}
+          {this.props.buttonName}
+          </button>
         </div>
       </div>
     )
