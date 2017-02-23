@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
+import $ from 'jquery'
+
 
 //components
 import ProjectsGallery from './ProjectsGallery.js';
@@ -64,6 +66,7 @@ var content = {
         <NavBar />
         <LandingComponent />
         <HeaderPanel 
+          id='skills'
           mainHeader={content.skills.mainHeader} 
           headerDetail={content.skills.headerDetail}
           buttonName={content.skills.buttonName}
@@ -74,6 +77,7 @@ var content = {
           <SkillCharts activeChart={this.state.activeChart}/>
         </div>
         <HeaderPanel 
+          id='projects'
           mainHeader={content.projects.mainHeader} 
           headerDetail={content.projects.headerDetail}
           buttonName={content.projects.buttonName}
@@ -86,7 +90,7 @@ var content = {
           buttonName={content.about.buttonName}
           clickHandler={content.about.clickHandler}
         />
-        <div className='filler'>
+        <div id='contact' className='filler'>
           <div style={{margin: '20px 0 20px 0', flex: 1, borderRight: '3px solid white'}}></div>
           <div style={
             {

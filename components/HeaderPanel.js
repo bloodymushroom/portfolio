@@ -7,7 +7,7 @@ export default class HeaderPanel extends Component {
 
   render() {
     return (
-      <div className='header-container'>
+      <div id={this.props.id} className='header-container'>
         <div className='header-column'>
           <div className='main-header'>
             <span>{this.props.mainHeader}</span>

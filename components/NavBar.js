@@ -1,8 +1,27 @@
 import React, {Component} from 'react'
+import $ from 'jquery'
 
 export default class NavBar extends Component {
   constructor() {
     super();
+  }
+
+  // set up scroll animation
+  componentDidMount() {
+    console.log('worked?')
+    $('.navitem a').on('click', function(e) {
+      if(this.hash) {
+        e.preventDefault();
+        var hash = this.hash;
+        console.log('hash: ',hash)
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - 150
+        }, 500, 'swing', function() {
+          window.location.hash = hash;
+        })
+      }
+    })
   }
 
   render() {
@@ -12,7 +31,7 @@ export default class NavBar extends Component {
         </div>
         <div className='navitem left'>
           <div className='nav-row top'>
-          <a href='#'><span className='title hoverable'>Portfolio</span></a>
+          <a href='#home'><span className='title hoverable'>Portfolio</span></a>
           </div>
           <div className='nav-row bottom'>    
             <span>Emmeline Lan</span>
@@ -20,10 +39,10 @@ export default class NavBar extends Component {
         </div>
         <div className='navitem right'>
           <div className='nav-row top'>
-            <a href='#'>Home</a><span> | </span>
-            <a>Projects</a><span> | </span>
-            <a>About</a><span> | </span> 
-            <a>Contact</a>
+            <a href='#home'>Home</a><span> | </span>
+            <a href='#projects'>Projects</a><span> | </span>
+            <a href='#skills'>About</a><span> | </span> 
+            <a href='#contact'>Contact</a>
           </div>
           <div className='nav-row bottom'>
             <div style={{marginTop: '5px'}}>Connect with me:</div>

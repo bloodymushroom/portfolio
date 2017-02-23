@@ -47,7 +47,7 @@ export default class LandingComponent extends Component {
 
   render() {
     return(
-      <div className='landing-container'>
+      <div id='home' className='landing-container'>
         <div className='landing-bar'></div>
         {this.pageTitle()}
         {this.jobTitle()}
