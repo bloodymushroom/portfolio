@@ -44,25 +44,25 @@ export default class ProjectsGallery extends Component {
   render() {
     return (
       <div onClick={this.removeTip} className='panels'>
-        {this.state.shouldTip && <Tooltip style={{opacity: 1, top:'35%', right:'25%'}} content='Select a panel!' />}
+        {this.state.shouldTip && <Tooltip style={{opacity: 1, top:'30%', right:'25%'}} content='Select a panel!' />}
         <div className='panel panel-1'>
           <p>Angular - Express - Mongo</p>
-          <p>Tinder Clone</p>
+          <p className='clickable-text'>Tinder Clone</p>
           <p>My take on Tinder</p>
         </div>
         <div className='panel panel-2'>
           <p>React - Express - MySQL</p>
-          <p>HR Gotchi</p>
+          <p className='clickable-text'>HR Gotchi</p>
           <p>Digital Class Pet</p>
         </div>
         <div className='panel panel-3'>
           <p>React - Express - MongoDB</p>
-          <p>Colorz.io</p>
+          <p className='clickable-text'>Colorz.io</p>
           <p>Color Palette</p>
         </div>
         <div className='panel panel-4'>    
           <p>React - Express - MySQL</p>
-          <p>Callback</p>
+          <p className='clickable-text'>Callback</p>
           <p>Personal Recruiter</p>
         </div>
       </div>

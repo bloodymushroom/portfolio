@@ -41,23 +41,23 @@ export default class SkillsSpinner extends Component {
       <div style={{position: 'relative'}} onClick={this.removeTip}>
         {this.state.shouldTip && <Tooltip content="Click a category!"/>}
         <div className='transformer'>
-          <div onClick={() => this.transformDivs(0, 'Languages')} className='cat cat-1'>
-            <div>
+          <div className='cat cat-1'>
+            <div onClick={() => this.transformDivs(0, 'Languages')} className='clickable-text'>
             Languages
             </div>
           </div>
-          <div onClick={() => this.transformDivs(-90, 'Frameworks')} className='cat cat-2'>
-            <div>
+          <div className='cat cat-2'>
+            <div onClick={() => this.transformDivs(-90, 'Frameworks')} className='clickable-text'>
             Frameworks
             </div>
           </div> 
-          <div onClick={() => this.transformDivs(180, 'BackEnd')} className='cat cat-3'>
-            <div>
+          <div className='cat cat-3'>
+            <div onClick={() => this.transformDivs(180, 'BackEnd')} className='clickable-text'>
             Back End
             </div>
           </div>
-          <div onClick={() => this.transformDivs(90, 'Other')} className='cat cat-4'>
-            <div>
+          <div className='cat cat-4'>
+            <div onClick={() => this.transformDivs(90, 'Other')} className='clickable-text'>
             Other
             </div>
           </div>

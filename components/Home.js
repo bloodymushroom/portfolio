@@ -11,23 +11,23 @@ import SkillCharts from './SkillCharts';
 import HeaderPanel from './HeaderPanel';
 import LandingComponent from './LandingComponent';
 import Tooltip from './Tooltip'
+import OtherExperience from './OtherExperience';
 
 var content = {
   skills: {
     mainHeader: 'Skills',
-    headerDetail: 'I am knowledgable across the stack, with specialization in front-end development. I love using React and CSS3 tricks to create dynamic and responsive UIs!',
+    headerDetail: 'I am a software engineer knowledgable across the stack, with specialization in front-end development. I love using React and CSS3 tricks to create dynamic and responsive UIs! Check my skills below.',
     buttonName: 'View Full Resume',
     clickHandler: () => console.log('Skills')
   },
   projects: {
-    mainHeader: 'Projects',
-    headerDetail: 'Here are some of my projects. Framworks include React with MobX and Angular. Platforms include web, mobile, and Chrome extension.',
+    headerDetail: 'Here are some of my projects built with the tech mentioned above! Platforms include web, mobile, and Chrome extension.',
     buttonName: 'See Project Details',
     clickHandler: () => console.log('Projects')
   },
   about: {
     mainHeader: 'About Me',
-    headerDetail: 'In addition to programming, I have some other skills and experiences in the semiconductor, healthcare, and art industry!',
+    headerDetail: 'In addition to programming, I also have professional experience in the semiconductor, healthcare, and art industries.',
     buttonName: 'See Other Projects',
     clickHandler: () => console.log('About')
   }
@@ -85,11 +85,15 @@ var content = {
         />
         <ProjectsGallery />
         <HeaderPanel 
+          id='about'
           mainHeader={content.about.mainHeader} 
           headerDetail={content.about.headerDetail}
           buttonName={content.about.buttonName}
           clickHandler={content.about.clickHandler}
         />
+        <OtherExperience />
+
+
         <div id='contact' className='filler'>
           <div style={{margin: '20px 0 20px 0', flex: 1, borderRight: '3px solid white'}}></div>
           <div style={
