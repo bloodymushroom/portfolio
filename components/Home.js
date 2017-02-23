@@ -21,6 +21,7 @@ var content = {
     clickHandler: () => console.log('Skills')
   },
   projects: {
+    mainHeader: 'Projects',
     headerDetail: 'Here are some of my projects built with the tech mentioned above! Platforms include web, mobile, and Chrome extension.',
     buttonName: 'See Project Details',
     clickHandler: () => console.log('Projects')
