@@ -73,7 +73,7 @@ var content = {
           buttonName={content.skills.buttonName}
           clickHandler={content.skills.clickHandler}
         />
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', height: '50vh'}}>
           <SkillsSpinner setActiveChart={(str) => this.setActiveChart(str)} activeChart={this.state.activeChart}/>
           <SkillCharts activeChart={this.state.activeChart}/>
         </div>
